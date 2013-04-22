@@ -4,11 +4,9 @@
 
     public partial class MainPage : PhoneApplicationPage
     {
-        // Constructor
         public MainPage()
         {
             this.InitializeComponent();
-            //this.DataContext = new MainViewModel();
         }
     }
 }

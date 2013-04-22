@@ -5,6 +5,9 @@
 
     using AutofacWP8DependencyInjectionDemo.Annotations;
 
+    /// <summary>
+    /// This ViewModel will be dynamically injected into the view.
+    /// </summary>
     public class ItemViewModel : INotifyPropertyChanged
     {
         private string lineOne;
