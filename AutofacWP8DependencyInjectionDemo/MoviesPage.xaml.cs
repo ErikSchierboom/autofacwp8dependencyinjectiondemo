@@ -2,9 +2,9 @@
 {
     using Microsoft.Phone.Controls;
 
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MoviesPage : PhoneApplicationPage
     {
-        public MainPage()
+        public MoviesPage()
         {
             this.InitializeComponent();
         }

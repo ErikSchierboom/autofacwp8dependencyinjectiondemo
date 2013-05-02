@@ -21,35 +21,23 @@ namespace AutofacWP8DependencyInjectionDemo
             // Create the container builder which is used to create the IContainer instance
             var containerBuilder = new ContainerBuilder();
 
-            // Register the two view model types
-            containerBuilder.RegisterType<MainViewModel>();
-            containerBuilder.RegisterType<ItemViewModel>();
+            // Register the view model type
+            containerBuilder.RegisterType<MoviesViewModel>();
 
             // Build the container
             this.container = containerBuilder.Build();
         }
 
         /// <summary>
-        /// Gets the main view model. It does this by dynamically resolving it
-        /// from the Autofac container.
+        /// Gets the movies view model. It does this by dynamically resolving it
+        /// from the Autofac container. This property will be used in the xaml page
+        /// to bind the page against.
         /// </summary>
-        public MainViewModel MainViewModel
+        public MoviesViewModel MoviesViewModel
         {
             get
             {
-                return this.container.Resolve<MainViewModel>();
-            }
-        }
-
-        /// <summary>
-        /// Gets the item view model. It does this by dynamically resolving it
-        /// from the Autofac container.
-        /// </summary>
-        public ItemViewModel ItemViewModel
-        {
-            get
-            {
-                return this.container.Resolve<ItemViewModel>();
+                return this.container.Resolve<MoviesViewModel>();
             }
         }
     }
